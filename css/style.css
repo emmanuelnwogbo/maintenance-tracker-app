@@ -42,9 +42,17 @@ body {
   clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 89%, 0 100%);
   background-color: rgb(60, 140, 209);
   border-bottom: 1px solid #e8e8e8;
+  padding: 10% 10%;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container_jumbotron-h1 {
+  color: #fff;
+  font-size: 300%;
 }
 
 .container_features {
   width: 100%;
   margin-top: 3px;
+  display: flex;
 }
