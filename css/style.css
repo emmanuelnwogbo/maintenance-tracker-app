@@ -24,6 +24,22 @@ body {
   justify-content: space-around;
 }
 
+.header_input {
+  width: 30%;
+  height: 40px;
+  border: 2px solid #e8e8e8;
+  padding: 5px 5px;
+}
+
+.header_input:focus {
+  border: 2px solid #7289da;
+}
+
+.header_input::placeholder {
+  color: #e8e8e8;
+  font-size: 1.5em;
+}
+
 .container {
   width: 95%;
   min-height: 100vh;
