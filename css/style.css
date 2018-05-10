@@ -13,14 +13,15 @@ body {
 }
 
 .header {
-  height: 9%;
+  min-height: 8%;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #fff;
   border-bottom: 1px solid #e8e8e8;
   position: fixed;
   z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .container {
