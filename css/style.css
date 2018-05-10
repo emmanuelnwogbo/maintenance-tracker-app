@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-  min-width: 95%;
+  width: 95%;
   min-height: 100vh;
   margin-top: 85px;
   margin-left: auto;
@@ -40,15 +40,31 @@ body {
   width: 100%;
   -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 89%, 0 100%);
   clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 89%, 0 100%);
-  background-color: rgb(60, 140, 209);
+  background-color: #7289da;
   border-bottom: 1px solid #e8e8e8;
   padding: 10% 10%;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-.container_jumbotron-h1 {
+.container_jumbotron>* {
+  margin-bottom: 20px;
   color: #fff;
+}
+
+.container_jumbotron-h1 {
   font-size: 300%;
+}
+
+.container_jumbotron-p {
+  width: 40%
+}
+
+.container_jumbotron-signup {
+  text-transform: uppercase;
+  background: #590059;
+  padding: 7px 15px;
+  border-radius: 5%;
+  text-decoration: none;
 }
 
 .container_features {
