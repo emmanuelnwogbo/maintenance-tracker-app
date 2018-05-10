@@ -16,14 +16,14 @@
   <div class="header">
     <input type="text" placeholder="what do you want maintained?" class="header_input">
     <div class="header_btns">
-      <a href="#" class="header_btns-requestbtn">request</a>
-      <a href="#" class="header_btns-signinbtn">sign in</a>
+      <a href="#" class="header_btns-requestbtn" id="request-btn">request</a>
+      <a href="#" class="header_btns-signinbtn" id="signin-btn">sign in</a>
     </div>
   </div>
   <div class="container">
-    <div class="overlay"></div>
+    <div class="overlay" id="overlay"></div>
 
-    <div class="credentials signup">
+    <div class="credentials signup" id="signup-form">
       <form class="credentials_signup-form">
         <h3 class="credentials_signup-form-label">first name</h3>
         <input id="" placeholder="firstname" type="text" name="first name">
@@ -53,7 +53,7 @@
       <h1 class="container_jumbotron-h1">Maintenance Tracker</h1>
       <p class="container_jumbotron-p">maintenance lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quibusdam cum nam, obcaecati reprehenderit
         nostrum nisi laudantium quae provident aut iusto tenetur maxime totam. Debitis eligendi et soluta consequuntur consequatur?</p>
-      <a href="#" class="container_jumbotron-signup">sign up</a>
+      <a href="#" class="container_jumbotron-signup" id="signup-btn">sign up</a>
     </div>
 
     <div class="container_features">
@@ -111,5 +111,6 @@
     </footer>
   </div>
 </body>
+<script src="js/index.js"></script>
 
 </html>
