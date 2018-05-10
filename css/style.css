@@ -22,12 +22,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .header_input {
   width: 30%;
   height: 40px;
   border: 2px solid #e8e8e8;
+  border-radius: 2px;
   padding: 5px 5px;
 }
 
@@ -38,6 +40,15 @@ body {
 .header_input::placeholder {
   color: #e8e8e8;
   font-size: 1.5em;
+}
+
+.header_btns>* {
+  text-transform: uppercase;
+  background: #590059;
+  padding: 7px 12px;
+  border-radius: 4%;
+  text-decoration: none;
+  color: #fff;
 }
 
 .container {
@@ -80,7 +91,7 @@ body {
   text-transform: uppercase;
   background: #590059;
   padding: 7px 15px;
-  border-radius: 5%;
+  border-radius: 4%;
   text-decoration: none;
 }
 
