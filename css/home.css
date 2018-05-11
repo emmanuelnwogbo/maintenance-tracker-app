@@ -123,13 +123,20 @@ body {
   font-size: 1.5em;
 }
 
-.header_btns-requestbtn {
+.header_btn {
   text-transform: uppercase;
-  background: #590059;
   padding: 7px 12px;
   border-radius: 4%;
   text-decoration: none;
   color: #fff;
+}
+
+.header_btns-request {
+  background: #590059;
+}
+
+.header_btns-signout {
+  background: transparent;
 }
 
 .container {
@@ -167,7 +174,9 @@ body {
 }
 
 .container_request-card>p {
-  width: 50%
+  width: 50%;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .container_request-card>label {
