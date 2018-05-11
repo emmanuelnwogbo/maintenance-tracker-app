@@ -2,6 +2,10 @@
 
 Maintenance Tracker is an application that provides users the ability to reach out to the operations or repairs department about repair or maintenance requests and monitor the status of their request.
 
+## Project version
+
+This is the first version of the project and includes a simple front end. The UI template is hosted on github pages at (https://emmanuelnwogbo.github.io/maintenance-tracker-app/)
+
 ## Getting Started
 
 This project is built using html, css and javascript. To get started simply click the green button at the top right of this repo, and copy the link or click the download zip link.
