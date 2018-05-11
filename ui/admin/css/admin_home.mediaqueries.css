@@ -1,0 +1,159 @@
+@media screen and (max-width: 1024px) {
+  .header_input {
+    width: 60%;
+    height: 50px;
+  }
+  .request {
+    width: 90%;
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  .container {
+    margin-top: 150px;
+  }
+  .container_h1 {
+    font-size: 25px;
+  }
+  .container_request-card>p {
+    width: 80%;
+    font-size: 30px;
+  }
+  .container_request-card>label {
+    padding: 4px 5px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header_input {
+    width: 60%;
+    height: 50px;
+  }
+  .request {
+    width: 90%;
+    margin-top: 10px;
+    font-size: 40px;
+  }
+  .container_h1 {
+    font-size: 20px;
+  }
+  .container_request-card>* {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  .container_request-card>p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header_input {
+    width: 60%;
+    height: 50px;
+  }
+  .request {
+    width: 90%;
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  .container {
+    margin-top: 150px;
+  }
+  .container_h1 {
+    font-size: 25px;
+  }
+  .container_request-card>p {
+    width: 80%;
+    font-size: 30px;
+  }
+  .container_request-card>label {
+    padding: 4px 5px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .header_input {
+    width: 60%;
+    height: 50px;
+  }
+  .request {
+    width: 90%;
+    margin-top: 10px;
+    font-size: 19px;
+  }
+  .container_h1 {
+    font-size: 20px;
+  }
+  .container_request-card>p {
+    width: 80%;
+    font-size: 20px;
+  }
+  .container_request-card>label {
+    padding: 4px 5px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .header_input {
+    width: 60%;
+    height: 50px;
+  }
+  .request {
+    width: 90%;
+    margin-top: 10px;
+    font-size: 19px;
+  }
+  .container_h1 {
+    font-size: 20px;
+  }
+  .container_request-card>p {
+    width: 80%;
+    font-size: 20px;
+  }
+  .container_request-card>label {
+    padding: 4px 5px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header_input {
+    width: 60%;
+    height: 50px;
+  }
+  .request {
+    width: 90%;
+    margin-top: 10px;
+    font-size: 19px;
+  }
+  .container_h1 {
+    font-size: 20px;
+  }
+  .container_request-card>p {
+    width: 80%;
+    font-size: 20px;
+  }
+  .container_request-card>label {
+    padding: 4px 5px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header_input {
+    width: 60%;
+    height: 50px;
+  }
+  .request {
+    width: 90%;
+    margin-top: 10px;
+  }
+  .container_h1 {
+    font-size: 20px;
+  }
+  .container_request-card>p {
+    width: 90%;
+  }
+}
