@@ -203,12 +203,55 @@ body {
 }
 
 .footer {
-  height: 350px;
+  min-height: 350px;
   width: 100%;
   color: #fff;
   background: #590059;
   margin-top: 3px;
-  padding: 20px 20px;
+  padding: 10px 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.footer>* {
+  padding: 10px 10px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer_menu>ul>li {
+  text-decoration: none;
+  list-style: none;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.footer_menu-ui_elements>h2 {
+  margin-bottom: 15px;
+}
+
+.footer_menu-ui_elements>ul>li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.footer_menu-ui_elements>ul>li>a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer_menu-jobs>h2 {
+  margin-bottom: 15px;
+}
+
+.footer_menu-jobs>ul>li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.footer_menu-jobs>ul>li>a {
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 15px;
 }
