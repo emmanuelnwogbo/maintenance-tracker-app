@@ -24,6 +24,13 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .header_btn {
+    padding: 8px 9px;
+    font-size: 25px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header_input {
     width: 60%;
@@ -32,14 +39,10 @@
   .request {
     width: 90%;
     margin-top: 5px;
-    font-size: 40px;
-  }
-  .header_input {
-    width: 60%;
-    height: 40px;
+    font-size: 20px;
   }
   .header_btn {
-    padding: 4px 5px;
+    padding: 8px 9px;
   }
   .container_h1 {
     font-size: 20px;
@@ -58,16 +61,19 @@
     width: 60%;
     height: 50px;
   }
+  .header_btn {
+    padding: 9px 7px;
+  }
   .request {
     width: 90%;
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 20px;
   }
   .container {
     margin-top: 150px;
   }
   .container_h1 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .container_request-card>p {
     width: 80%;
@@ -79,7 +85,7 @@
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 480px) {
   .header_input {
     width: 60%;
     height: 50px;
@@ -87,7 +93,56 @@
   .request {
     width: 90%;
     margin-top: 10px;
+    font-size: 15px;
+  }
+  .container_h1 {
+    font-size: 15px;
+  }
+  .container_request-card>p {
+    width: 80%;
     font-size: 20px;
+  }
+  .container_request-card>label {
+    padding: 4px 2px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .header_input {
+    width: 60%;
+    height: 50px;
+  }
+  .request {
+    width: 90%;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  .container_h1 {
+    font-size: 15px;
+  }
+  .container_request-card>p {
+    width: 80%;
+    font-size: 20px;
+  }
+  .container_request-card>label {
+    padding: 4px 2px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header_input {
+    width: 60%;
+    height: 50px;
+  }
+  .header_btn {
+    padding: 4px 4px;
+  }
+  .request {
+    width: 90%;
+    margin-top: 10px;
+    font-size: 15px;
   }
   .container {
     margin-top: 150px;
@@ -97,10 +152,69 @@
   }
   .container_request-card>p {
     width: 80%;
-    font-size: 20px;
+    font-size: 19px;
   }
   .container_request-card>label {
-    padding: 4px 5px;
+    padding: 2px 2px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header_input {
+    width: 60%;
+    height: 50px;
+  }
+  .header_btn {
+    font-size: 15px;
+  }
+  .request {
+    width: 90%;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  .container {
+    margin-top: 100px;
+  }
+  .container_h1 {
     font-size: 20px;
+  }
+  .container_request-card>p {
+    width: 80%;
+    font-size: 15px;
+  }
+  .container_request-card>label {
+    padding: 4px 3px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header_input {
+    width: 60%;
+    height: 50px;
+  }
+  .header_btn {
+    padding: 3px 2px;
+    font-size: 15px;
+  }
+  .request {
+    width: 90%;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  .container {
+    margin-top: 150px;
+  }
+  .container_h1 {
+    font-size: 15px;
+  }
+  .container_request-card>p {
+    width: 80%;
+    font-size: 15px;
+  }
+  .container_request-card>label {
+    padding: 6px 2px;
+    font-size: 10px;
   }
 }
