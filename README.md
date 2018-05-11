@@ -28,5 +28,5 @@ All you need to be able to view and use this project is a text editor.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for detail
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for detail
 
