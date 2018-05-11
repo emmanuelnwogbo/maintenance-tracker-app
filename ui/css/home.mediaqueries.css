@@ -90,6 +90,9 @@
     width: 60%;
     height: 50px;
   }
+  .header_btn {
+    font-size: 20px;
+  }
   .request {
     width: 90%;
     margin-top: 10px;
@@ -112,6 +115,9 @@
   .header_input {
     width: 60%;
     height: 50px;
+  }
+  .header_btn {
+    font-size: 15px;
   }
   .request {
     width: 90%;
@@ -204,7 +210,7 @@
     font-size: 10px;
   }
   .container {
-    margin-top: 150px;
+    margin-top: 100px;
   }
   .container_h1 {
     font-size: 15px;
