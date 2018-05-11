@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fcfcfc;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.header {
+  min-height: 8%;
+  width: 100%;
+  background-color: #7289da;
+  border-bottom: 1px solid #e8e8e8;
+  position: fixed;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header_input {
+  width: 30%;
+  height: 40px;
+  border: 2px solid #7289da;
+  border-radius: 2px;
+  padding: 5px 5px;
+}
+
+.header_input:focus {
+  border: 2px solid #e8e8e8;
+}
+
+.header_input::placeholder {
+  color: #e8e8e8;
+  font-size: 1.5em;
+}
+
+.header_btn {
+  text-transform: uppercase;
+  padding: 7px 12px;
+  border-radius: 4%;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header_btn-signout {
+  background: transparent;
+}
+
+.overlay {
+  z-index: 3000;
+  position: fixed;
+  background: #000000;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+}
+
+.request {
+  background: #fff;
+  z-index: 4000;
+  padding: 10px 10px;
+  position: fixed;
+  width: 60%;
+  align-self: center;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  visibility: hidden;
+}
+
+.request>* {
+  margin-bottom: 30px;
+}
+
+.request_status>label {
+  padding: 4px 5px;
+  border-radius: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.container {
+  width: 80%;
+  min-height: 100vh;
+  margin-top: 85px;
+  padding: 9px 9px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e8e8e8;
+}
+
+.container_h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+  align-self: center;
+  color: #590059;
+  margin-bottom: 4px;
+}
+
+.container_request-card {
+  background: #e0edff;
+  width: 90%;
+  box-shadow: 1px 2px 5px #e8e8e8;
+  border: 1px solid #e8e8e8;
+  padding: 6px 6px;
+  margin-bottom: 15px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.container_request-card>* {
+  margin-bottom: 10px;
+}
+
+.container_request-card>p {
+  width: 50%;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.container_request-card>label {
+  padding: 4px 5px;
+  border-radius: 3px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.container_request-card>label:hover {
+  cursor: pointer;
+}
+
+.container_request-pending {
+  background: blueviolet;
+}
+
+.container_request-approved {
+  background: green;
+}
+
+.container_request-rejected {
+  background: red;
+}
+
+.container_request-resolved {
+  background: blue
+}
