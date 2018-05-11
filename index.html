@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="ui/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed" rel="stylesheet">
+  <title>Maintenace Tracker App</title>
+</head>
+
+<body>
+  <div class="header">
+    <input type="text" placeholder="what do you want maintained?" class="header_input">
+    <div class="header_btns">
+      <a href="#" class="header_btns-requestbtn" id="request-btn">request</a>
+      <a href="#" class="header_btns-signinbtn" id="signin-btn">sign in</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="overlay" id="overlay"></div>
+
+    <div class="credentials signup" id="signup-form">
+      <form class="credentials_signup-form">
+        <h3 class="credentials_signup-form-label">first name</h3>
+        <input id="" placeholder="firstname" type="text" name="first name">
+        <h3 class="credentials_signup-form-label">last name</h3>
+        <input id="" placeholder="lastname" type="text" name="last name">
+        <h3 class="credentials_signup-form-label">email</h3>
+        <input id="" placeholder="email" type="email" name="email">
+        <h3 class="credentials_signup-form-label">password</h3>
+        <input id="" placeholder="password" type="password" name="password">
+        <h3 class="credentials_signup-form-label">confirm password</h3>
+        <input id="" placeholder="confirm password" type="password" name="confirm password">
+        <a href="#">submit</a>
+      </form>
+    </div>
+
+    <div class="credentials signin" id="signin-form">
+      <form class="credentials_signin-form">
+        <h3 class="credentials_signin-form-label">email</h3>
+        <input id="" placeholder="email" type="email" name="email">
+        <h3 class="credentials_signin-form-label">password</h3>
+        <input id="" placeholder="password" type="password" name="password">
+        <a href="#">submit</a>
+      </form>
+    </div>
+
+    <div class="container_jumbotron">
+      <h1 class="container_jumbotron-h1">Maintenance Tracker</h1>
+      <p class="container_jumbotron-p">maintenance lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quibusdam cum nam, obcaecati reprehenderit
+        nostrum nisi laudantium quae provident aut iusto tenetur maxime totam. Debitis eligendi et soluta consequuntur consequatur?</p>
+      <a href="#" class="container_jumbotron-signup" id="signup-btn">sign up</a>
+    </div>
+
+    <div class="container_features">
+      <div class="container_features-feature">
+        <div class="container_features-feature_child">
+          <p class="container_features-feature-h2"> electronics</p>
+          <i class="fas fa-bolt"></i>
+        </div>
+      </div>
+      <div class="container_features-feature">
+        <div class="container_features-feature_child">
+          <p class="container_features-feature-h2"> gadgets</p>
+          <i class="fas fa-headphones"></i>
+        </div>
+      </div>
+      <div class="container_features-feature">
+        <div class="container_features-feature_child">
+          <p class="container_features-feature-h2"> automobiles</p>
+          <i class="fas fa-taxi"></i>
+        </div>
+      </div>
+      <div class="container_features-feature">
+        <div class="container_features-feature_child">
+          <p class="container_features-feature-h2"> office appliances</p>
+          <i class="fas fa-print"></i>
+        </div>
+      </div>
+      <div class="container_features-feature">
+        <div class="container_features-feature_child">
+          <p class="container_features-feature-h2"> home appliances</p>
+          <i class="fas fa-tv"></i>
+        </div>
+      </div>
+      <div class="container_features-feature">
+        <div class="container_features-feature_child">
+          <p class="container_features-feature-h2"> generators</p>
+          <i class="fas fa-cogs"></i>
+        </div>
+      </div>
+      <div class="container_features-feature">
+        <div class="container_features-feature_child">
+          <p class="container_features-feature-h2"> engineering equipments</p>
+          <i class="fas fa-wrench"></i>
+        </div>
+      </div>
+      <div class="container_features-feature">
+        <div class="container_features-feature_child">
+          <p class="container_features-feature-h2"> farming equipments</p>
+          <i class="fas fa-users-cog"></i>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer_menu">
+        <ul>
+          <li>electronics</li>
+          <li>engineering equipment</li>
+          <li>farm tools</li>
+          <li>home appliances</li>
+          <li>office appliances</li>
+          <li>furniture</li>
+          <li>cars</li>
+          <li>bikes</li>
+          <li>electronics</li>
+          <li>engineering equipment</li>
+          <li>farm tools</li>
+          <li>home appliances</li>
+          <li>office appliances</li>
+        </ul>
+      </div>
+
+      <div class="footer_menu-ui_elements">
+        <h2 class="footer_menu-ui_elements_h2">UI pages</h2>
+        <ul>
+          <li>
+            <a href="ui/admin/index.html">admin landing page</a>
+          </li>
+          <li>
+            <a href="ui/admin/admin_home.html">admin home</a>
+          </li>
+          <li>
+            <a href="ui/home.html">user home</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer_menu-jobs">
+        <h2 class="footer_menu-h1">jobs</h2>
+        <ul>
+          <li>
+            <a href="">admin</a>
+          </li>
+          <li>
+            <a href="">mainteiners</a>
+          </li>
+        </ul>
+      </div>x
+    </footer>
+  </div>
+</body>
+<script src="ui/js/index.js"></script>
+
+</html>
