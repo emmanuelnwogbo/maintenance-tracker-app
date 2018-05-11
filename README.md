@@ -4,7 +4,7 @@ Maintenance Tracker is an application that provides users the ability to reach o
 
 ## Project version
 
-This is the first version of the project and includes a simple front end. The UI template is hosted on github pages at (https://emmanuelnwogbo.github.io/maintenance-tracker-app/)
+This is the first version of the project and includes a simple front end. The UI template is hosted on github pages at https://emmanuelnwogbo.github.io/maintenance-tracker-app/
 
 ## Getting Started
 
