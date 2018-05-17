@@ -8,7 +8,8 @@ dotenv.config()
 const app = express();
 
 const {
-  indexRoute
+  indexRoute,
+  userRoute
 } = routes;
 
 app.use(bodyParser.json())
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use('/api/v1', indexRoute)
+app.use('/api/v1/auth', userRoute)
 
 
 const PORT = process.env.PORT || 8080

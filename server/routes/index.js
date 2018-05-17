@@ -1,5 +1,7 @@
 import express from 'express';
 
+import userRoute from './user.route';
+
 const router = express.Router()
 const indexRoute = router
 
@@ -9,5 +11,6 @@ router.get('/', (req, res) => {
 })
 
 export default {
-  indexRoute
+  indexRoute,
+  userRoute
 }
