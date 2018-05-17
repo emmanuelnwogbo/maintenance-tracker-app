@@ -1,15 +1,32 @@
-import express from 'express';
+import express from 'express'
+import bodyParser from 'body-parser'
+import dotenv from 'dotenv'
 
+import routes from './routes'
+
+dotenv.config()
 const app = express();
 
-app.get('/hello', (req, res) => {
-  res.status(200).send([{
-    message: 'hello world'
-  }]);
-})
+const {
+  indexRoute
+} = routes;
 
-app.listen(3000, () => {
-  return 'listening';
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+  extended: false
+}))
+
+app.use('/api/v1', indexRoute)
+
+
+const PORT = process.env.PORT || 8080
+
+app.listen(PORT, error => {
+  if (error) {
+    return error
+  }
+
+  return `server started on port ${PORT}`
 })
 
 
