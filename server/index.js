@@ -9,7 +9,8 @@ const app = express();
 
 const {
   indexRoute,
-  userRoute
+  userRoute,
+  adminRoute
 } = routes;
 
 app.use(bodyParser.json())
