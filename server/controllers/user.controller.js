@@ -1,6 +1,8 @@
 export default class UserController {
   static signUp(req, res) {
-    console.log(req.body);
+    res.status(201).send({
+      message: `you've signed up succesfully.`
+    })
   }
 
   static signIn(req, res) {
