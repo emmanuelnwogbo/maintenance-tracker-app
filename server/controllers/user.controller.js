@@ -1,6 +1,6 @@
 export default class UserController {
   static signUp(req, res) {
-    console.log(req);
+    console.log(req.body);
   }
 
   static signIn(req, res) {
