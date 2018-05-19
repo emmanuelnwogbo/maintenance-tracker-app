@@ -12,6 +12,6 @@ export default class UserController {
   }
 
   static logout(req, res) {
-    console.log(req);
+
   }
 }
