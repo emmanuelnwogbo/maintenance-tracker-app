@@ -7,13 +7,19 @@ const {
   RequestController
 } = Controllers
 const {
-  addRequest
+  addRequest,
+  getRequests
 } = RequestController
 
 const {
   Validate,
-  Trim
+  Trim,
+  Authenticate
 } = Utility
+
+const {
+  findUserId
+} = Authenticate
 
 const {
   BasicInputCheck
@@ -22,7 +28,7 @@ const {
 const router = express.Router()
 const requestRoute = router
 
-router.get('/:adminid', BasicInputCheck, addRequest)
+router.get('/:adminid', findUserId, getRequests)
 
 router.post('/', Trim, BasicInputCheck, addRequest)
 
