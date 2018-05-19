@@ -11,19 +11,25 @@ function spaceCounter(iterable) {
 }
 
 export default class Validate {
-  static signInGate(req, res, next) {
+  static signUpGate(req, res, next) {
     const {
       inputs
     } = req
     spaceTotal = 0
 
     const {
+      firstname,
+      lastname,
       email,
-      password
+      password,
+      confirmpassword
     } = inputs
 
+    spaceCounter(firstname)
+    spaceCounter(lastname)
     spaceCounter(email)
     spaceCounter(password)
+    spaceCounter(confirmpassword)
 
     if (spaceTotal > 0) {
       return res.status(403).send({
@@ -33,7 +39,11 @@ export default class Validate {
 
     if (!validator.isEmail(email) ||
       validator.isEmpty(email) ||
-      validator.isEmpty(password)) {
+      validator.isEmpty(firstname) ||
+      validator.isEmpty(lastname) ||
+      validator.isEmpty(password) ||
+      validator.isEmpty(confirmpassword) ||
+      !validator.equals(password, confirmpassword)) {
       return res.status(403).send({
         message: `please make sure your credentials are correct`
       })

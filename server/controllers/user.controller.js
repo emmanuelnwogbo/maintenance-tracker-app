@@ -4,11 +4,7 @@ export default class UserController {
   }
 
   static signIn(req, res) {
-    const credentials = req.inputs
-    res.status(201).send({
-      credentials,
-      message: `you've signed in succesfully.`
-    })
+
   }
 
   static logout(req, res) {
