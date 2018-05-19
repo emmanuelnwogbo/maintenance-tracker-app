@@ -11,7 +11,7 @@ const {
 } = Controllers
 
 const {
-  signUp
+  signIn
 } = UserController
 
 const {
@@ -20,15 +20,10 @@ const {
 } = Utils
 
 const {
-  signUpGate
+  signInGate
 } = Validate
 
-
-router.post('/user/signup', Trim, signUpGate, signUp)
-
-router.post('/user/signin', (req, res) => {
-  res.send('hello user signin');
-})
+router.post('/user/signin', Trim, signInGate, signIn)
 
 router.post('/user/logout', (req, res) => {
   res.send('hello user logout');
