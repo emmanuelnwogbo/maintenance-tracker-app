@@ -5,7 +5,7 @@ export default class UserController {
 
   static signIn(req, res) {
     const credentials = req.inputs
-    res.status(201).send({
+    res.status(200).send({
       credentials,
       message: `you've signed in succesfully.`
     })
