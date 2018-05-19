@@ -19,8 +19,12 @@ const {
   Trim
 } = Utils
 
+const {
+  signUpGate
+} = Validate
 
-router.post('/user/signup', Trim, Validate, signUp)
+
+router.post('/user/signup', Trim, signUpGate, signUp)
 
 router.post('/user/signin', (req, res) => {
   res.send('hello user signin');
