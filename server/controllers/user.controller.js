@@ -3,7 +3,7 @@ export default class UserController {
     const credentials = req.inputs
     res.status(201).send({
       credentials,
-      message: `you are logged in as admin`
+      message: `you are logged in succesfully`
     })
   }
 
