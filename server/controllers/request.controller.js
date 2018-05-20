@@ -90,7 +90,7 @@ export default class RequestController {
   }
 
   static updateRequest(req, res) {
-    console.log(req);
+
   }
 
   static deleteRequest(req, res) {

@@ -9,7 +9,8 @@ const {
 const {
   addRequest,
   getRequests,
-  getRequest
+  getRequest,
+  updateRequest
 } = RequestController
 
 const {
@@ -39,9 +40,9 @@ router.get('/:adminid/:requestid', findUserId, getRequest)
 
 router.get('/user/:userid/:requestid', findUserId, getRequest)
 
-router.patch('/:userid/:requestid', (req, res) => {
-  res.send(`request modified`);
-})
+router.patch('/:adminid/:requestid', findUserId, updateRequest)
+
+router.patch('/user/:userid/:requestid', findUserId, updateRequest)
 
 router.delete('/:requestid', (req, res) => {
   res.send('request deleted')
