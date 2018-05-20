@@ -90,7 +90,17 @@ export default class RequestController {
   }
 
   static updateRequest(req, res) {
+    if (req.user) {
 
+    }
+
+    if (req.admin) {
+
+    }
+
+    return res.status(401).send({
+      message: `user not found`
+    })
   }
 
   static deleteRequest(req, res) {
