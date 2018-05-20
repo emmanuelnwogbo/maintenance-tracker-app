@@ -8,7 +8,8 @@ const {
 } = Controllers
 const {
   addRequest,
-  getRequests
+  getRequests,
+  getRequest
 } = RequestController
 
 const {
@@ -30,15 +31,15 @@ const requestRoute = router
 
 router.get('/:adminid', findUserId, getRequests)
 
-router.post('/', Trim, BasicInputCheck, addRequest)
-
 router.get('/user/:userid', findUserId, getRequests)
 
-router.get('/:requestid', (req, res) => {
-  res.send('one request sent')
-})
+router.post('/', Trim, BasicInputCheck, addRequest)
 
-router.patch('/:requestid', (req, res) => {
+router.get('/:adminid/:requestid', findUserId, getRequest)
+
+router.get('/user/:userid/:requestid', findUserId, getRequest)
+
+router.patch('/:userid/:requestid', (req, res) => {
   res.send(`request modified`);
 })
 
