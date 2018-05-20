@@ -29,4 +29,15 @@ router.post('/user/logout', (req, res) => {
   res.send('hello user logout');
 })
 
+router.post('/admin/signup', (req, res) => {
+  res.send('hello admin signup');
+})
+
+router.post('/admin/signin', Trim, signInGate, signIn)
+
+router.post('/admin/logout', (req, res) => {
+  res.send('hello admin logout');
+})
+
+
 export default userRoute

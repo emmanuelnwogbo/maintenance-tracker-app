@@ -1,7 +1,6 @@
 import express from 'express';
 
 import userRoute from './user.route';
-import adminRoute from './admin.route'
 import requestRoute from './request.route'
 
 const router = express.Router()
@@ -15,6 +14,5 @@ router.get('/', (req, res) => {
 export default {
   indexRoute,
   userRoute,
-  adminRoute,
   requestRoute
 }
