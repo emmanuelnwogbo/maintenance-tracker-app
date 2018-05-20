@@ -102,7 +102,6 @@ export default class RequestController {
       })
 
       if (result !== 0) {
-
         return res.status(200).send({
           message: `successfully edited 1 item`,
           result: req.inputs
