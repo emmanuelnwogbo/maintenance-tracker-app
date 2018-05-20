@@ -111,7 +111,7 @@ export default class RequestController {
 
       if (result === 0 && counter === db[0].length) {
         return res.status(404).send({
-          message: `found ${result} items`
+          message: `no item with such id exists`
         })
       }
     }

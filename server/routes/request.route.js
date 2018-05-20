@@ -40,7 +40,7 @@ router.get('/:adminid/:requestid', findUserId, getRequest)
 
 router.get('/user/:userid/:requestid', findUserId, getRequest)
 
-router.patch('/:adminid/:requestid', findUserId, updateRequest)
+router.patch('/:adminid/:requestid', Trim, findUserId, updateRequest)
 
 router.patch('/user/:userid/:requestid', Trim, BasicInputCheck, findUserId, updateRequest)
 
