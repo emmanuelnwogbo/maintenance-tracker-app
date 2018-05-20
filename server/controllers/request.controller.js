@@ -2,7 +2,7 @@ export default class RequestController {
   static addRequest(req, res, next) {
     const request = req.inputs
     res.status(201).send({
-      message: `request created succesfully`,
+      message: `request created successfully`,
       request
     })
   }

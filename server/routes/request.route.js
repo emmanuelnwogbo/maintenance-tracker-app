@@ -11,20 +11,14 @@ const {
 } = RequestController
 
 const {
-  Validate,
   Trim
 } = Utility
 
-const {
-  BasicInputCheck
-} = Validate
 
 const router = express.Router()
 const requestRoute = router
 
-router.get('/:adminid', BasicInputCheck, addRequest)
-
-router.post('/', Trim, BasicInputCheck, addRequest)
+router.post('/', Trim, addRequest)
 
 router.get('/:userid/requests', (req, res) => {
   res.send(`all a user's requests`)

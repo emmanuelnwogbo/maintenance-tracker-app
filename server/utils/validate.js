@@ -52,7 +52,7 @@ export default class Validate {
     next()
   }
 
-  static BasicInputCheck(req, res, next) {
+  /* static BasicInputCheck(req, res, next) {
     const {
       inputs
     } = req
@@ -73,5 +73,5 @@ export default class Validate {
     }
 
     next()
-  }
+  } */
 }
