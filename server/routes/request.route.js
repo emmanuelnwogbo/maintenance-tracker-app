@@ -10,7 +10,8 @@ const {
   addRequest,
   getRequests,
   getRequest,
-  updateRequest
+  updateRequest,
+  deleteRequest
 } = RequestController
 
 const {
@@ -44,8 +45,6 @@ router.patch('/:adminid/:requestid', findUserId, updateRequest)
 
 router.patch('/user/:userid/:requestid', Trim, BasicInputCheck, findUserId, updateRequest)
 
-router.delete('/:requestid', (req, res) => {
-  res.send('request deleted')
-})
+router.delete('/user/:userid/:requestid', findUserId, deleteRequest)
 
 export default requestRoute
