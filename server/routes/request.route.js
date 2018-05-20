@@ -32,9 +32,7 @@ router.get('/:adminid', findUserId, getRequests)
 
 router.post('/', Trim, BasicInputCheck, addRequest)
 
-router.get('/:userid/requests', (req, res) => {
-  res.send(`all a user's requests`)
-})
+router.get('/user/:userid', findUserId, getRequests)
 
 router.get('/:requestid', (req, res) => {
   res.send('one request sent')
