@@ -91,11 +91,61 @@ export default class RequestController {
 
   static updateRequest(req, res) {
     if (req.user) {
+      let result = 0
+      let counter = 0
 
+      db[0].map(item => {
+        counter += 1
+        if (item.id === req.params.requestid) {
+          result = item
+        }
+      })
+
+      if (result !== 0) {
+
+        return res.status(200).send({
+          message: `successfully edited 1 item`,
+          result: req.inputs
+        })
+      }
+
+      if (result === 0 && counter === db[0].length) {
+        return res.status(404).send({
+          message: `found ${result} items`
+        })
+      }
     }
 
     if (req.admin) {
+      const {
+        status
+      } = req.body
 
+      if (req.admin) {
+        let result = 0
+        let counter = 0
+
+        db[0].map(item => {
+          counter += 1
+          if (item.id === req.params.requestid) {
+            result = item
+          }
+        })
+
+        if (result !== 0) {
+          result.status = status
+          return res.status(200).send({
+            message: `successfully ${status} 1 item`,
+            result
+          })
+        }
+
+        if (result === 0 && counter === db[0].length) {
+          return res.status(404).send({
+            message: `no item with such id exists`
+          })
+        }
+      }
     }
 
     return res.status(401).send({
