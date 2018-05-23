@@ -3,28 +3,40 @@ import express from 'express';
 const router = express.Router()
 const requestRoute = router
 
-router.get('/:adminid', (req, res) => {
-  res.send('hello all requests')
+router.get('/users/requests', (req, res) => {
+  // a user can get a request
 })
 
-router.post('/', (req, res) => {
-  res.send('request posted')
+router.post('/users/requests', (req, res) => {
+  // a user can post a request
 })
 
-router.get('/:userid/requests', (req, res) => {
-  res.send(`all a user's requests`)
+router.get('/users/requests/:requestId', (req, res) => {
+  // a user or admin can get a particular request
 })
 
-router.get('/:requestid', (req, res) => {
-  res.send('one request sent')
+router.put('/users/requests/:requestId', (req, res) => {
+  // a user can update a request
 })
 
-router.patch('/:requestid', (req, res) => {
-  res.send(`request modified`);
+
+// all routes below are only accessible to admins
+
+router.get('/', (req, res) => {
+  // an admin can get all requests
+  // make sure this is available to only admins
 })
 
-router.delete('/:requestid', (req, res) => {
-  res.send('request deleted')
+router.put('/:requestId/approve', (req, res) => {
+  // an admin can approve a request
+})
+
+router.put('/:requestId/disapprove', (req, res) => {
+  // an admin can disaprove a request
+})
+
+router.put('/:requestId/resolve', (req, res) => {
+  // an admin can resolve a request
 })
 
 export default requestRoute

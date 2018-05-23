@@ -9,8 +9,7 @@ const app = express();
 
 const {
   indexRoute,
-  userRoute,
-  adminRoute,
+  authRoute,
   requestRoute
 } = routes;
 
@@ -20,8 +19,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use('/api/v1', indexRoute)
-app.use('/api/v1/user/auth', userRoute)
-app.use('/api/v1/admin/auth', adminRoute)
+app.use('/api/v1/auth', authRoute)
 app.use('/api/v1/request', requestRoute)
 
 const PORT = process.env.PORT || 8080
