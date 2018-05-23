@@ -25,11 +25,10 @@ body {
 .credentials {
   background: #fff;
   z-index: 4000;
-  padding: 10px 10px;
+  padding: 40px 20px;
   position: fixed;
   width: 60%;
   align-self: center;
-  margin-top: 150px;
   display: flex;
   justify-content: space-around;
   visibility: hidden;
@@ -47,21 +46,32 @@ body {
   padding: 4px 4px;
 }
 
+.credentials>form>h2 {
+  display: block;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 20px;
+  width: 100%;
+  text-transform: uppercase;
+  color: #590059;
+  margin-bottom: 10px;
+}
+
 .credentials>form>h3 {
   display: block;
   width: 100%;
-  margin-bottom: 10px;
   text-transform: uppercase;
   color: #590059;
+  font-size: 15px;
 }
 
 .credentials>form>input {
-  width: 100%;
+  width: 80%;
   height: 40px;
   border: 2px solid #590059;
   border-radius: 2px;
   padding: 5px 5px;
-  margin-bottom: 7px;
+  margin-bottom: 25px;
+  align-self: center;
 }
 
 .credentials>form>input:focus {
@@ -74,12 +84,13 @@ body {
 }
 
 .credentials>form>a {
-  width: 100%;
+  width: 80%;
   height: 40px;
   text-transform: uppercase;
   background-color: #7289da;
   color: #fff;
   text-decoration: none;
+  align-self: center;
 }
 
 .header {
@@ -174,7 +185,7 @@ body {
 
 .container_features>* {
   border: 1px solid #e8e8e8;
-  margin-bottom: 6px;
+  margin-bottom: 40px;
   padding: 10px 10px;
   width: 22%;
   height: 200px;
@@ -208,7 +219,6 @@ body {
   width: 100%;
   color: #fff;
   background: #590059;
-  margin-top: 3px;
   padding: 10px 10px;
   display: flex;
   flex-wrap: wrap;
@@ -255,4 +265,11 @@ body {
   text-decoration: none;
   color: inherit;
   margin-bottom: 15px;
+}
+
+.error_messages {
+  color: crimson;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 900;
 }
