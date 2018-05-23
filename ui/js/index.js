@@ -85,3 +85,38 @@ signup_form_btn.addEventListener('click', function (e) {
 
   }
 })
+
+signin_form_btn.addEventListener('click', function (e) {
+  e.preventDefault()
+  document.getElementById('signin_empty_input_warning').innerHTML = ``
+  document.getElementById('signin_email_warning').innerHTML = ``
+  let callAPI = true
+  const inputCheckArr = signin_form_content.childNodes
+  Array.from(inputCheckArr, function (n) {
+    if (n.tagName === 'INPUT' && n.value.length === 0) {
+      document.getElementById('signin_empty_input_warning').innerHTML = `no empty inputs allowed`
+      n.style.border = '2px solid crimson'
+      callAPI = false
+    }
+
+    if (n.tagName === 'INPUT' && n.value.length !== 0) {
+      n.style.border = '2px solid #7289da'
+      callAPI = true
+    }
+
+    if (n.name === 'email' && isEmail(n.value) === false) {
+      n.style.border = '2px solid crimson'
+      document.getElementById('signin_email_warning').innerHTML = `pls use a valid email`
+      callAPI = false
+    }
+
+    if (n.name === 'email' && isEmail(n.value) === true) {
+      n.style.border = '2px solid #7289da'
+      callAPI = true
+    }
+
+    if (callAPI === true && n.tagName === 'INPUT') {
+
+    }
+  })
+})
