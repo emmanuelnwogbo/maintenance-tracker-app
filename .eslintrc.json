@@ -31,6 +31,7 @@
         "indent": "off",
         "space-in-parens": "off",
         "function-paren-newline": "off",
-        "no-unused-vars": "off"
+        "no-unused-vars": "off",
+        "array-callback-return": "off"
     }
 }

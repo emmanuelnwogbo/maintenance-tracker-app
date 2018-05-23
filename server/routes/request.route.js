@@ -1,27 +1,48 @@
 import express from 'express';
 
+import Controllers from '../controllers'
+import Utility from '../utils'
+
+const {
+  RequestController
+} = Controllers
+const {
+  addRequest,
+  getRequests,
+  getRequest,
+  updateRequest
+} = RequestController
+
+const {
+  Validate,
+  Trim,
+  Authenticate
+} = Utility
+
+const {
+  findUserId
+} = Authenticate
+
+const {
+  BasicInputCheck
+} = Validate
+
 const router = express.Router()
 const requestRoute = router
 
-router.get('/:adminid', (req, res) => {
-  res.send('hello all requests')
-})
+router.get('/:adminid', findUserId, getRequests)
 
-router.post('/', (req, res) => {
-  res.send('request posted')
-})
+router.get('/user/:userid', findUserId, getRequests)
 
-router.get('/:userid/requests', (req, res) => {
-  res.send(`all a user's requests`)
-})
+router.post('/', Trim, BasicInputCheck, addRequest)
 
-router.get('/:requestid', (req, res) => {
-  res.send('one request sent')
-})
+router.get('/:adminid/:requestid', findUserId, getRequest)
 
-router.patch('/:requestid', (req, res) => {
-  res.send(`request modified`);
-})
+router.get('/user/:userid/:requestid', findUserId, getRequest)
+
+router.patch('/:adminid/:requestid', Trim, findUserId, updateRequest)
+
+router.patch('/user/:userid/:requestid', Trim, BasicInputCheck, findUserId, updateRequest)
 
 router.delete('/:requestid', (req, res) => {
   res.send('request deleted')
