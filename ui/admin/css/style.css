@@ -29,7 +29,6 @@ body {
   position: fixed;
   width: 60%;
   align-self: center;
-  margin-top: 10px;
   display: flex;
   justify-content: space-around;
   visibility: hidden;
@@ -108,7 +107,7 @@ body {
 
 .container {
   width: 95%;
-  margin-top: 85px;
+  margin-top: 70px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -152,4 +151,5 @@ body {
   color: crimson;
   font-size: 12px;
   text-transform: uppercase;
+  font-weight: 900;
 }
