@@ -102,7 +102,6 @@ export default class RequestController {
       })
 
       if (result !== 0) {
-
         return res.status(200).send({
           message: `successfully edited 1 item`,
           result: req.inputs
@@ -154,6 +153,32 @@ export default class RequestController {
   }
 
   static deleteRequest(req, res) {
-    console.log(req)
+    if (req.user) {
+      let result = 0
+      let counter = 0
+
+      db[0].map(item => {
+        counter += 1
+        if (item.id === req.params.requestid) {
+          result = item
+        }
+      })
+
+      if (result !== 0) {
+        return res.status(200).send({
+          message: `successfully deleted one item`
+        })
+      }
+
+      if (result === 0 && counter === db[0].length) {
+        return res.status(404).send({
+          message: `found ${result} item to delete`
+        })
+      }
+    }
+
+    return res.status(401).send({
+      message: `user not found`
+    })
   }
 }
