@@ -1,21 +1,11 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import dotenv from 'dotenv'
-import knex from 'knex'
 
 import routes from './routes'
+import db from './db'
 
 dotenv.config()
-
-const database = knex({
-  client: 'pg',
-  connection: {
-    host: '127.0.0.1',
-    user: 'postgres',
-    password: process.env.DB_PASSWORD,
-    database: 'mtrackerdb'
-  }
-})
 
 const app = express();
 
@@ -44,5 +34,4 @@ app.listen(PORT, error => {
   return `server started on port ${PORT}`
 })
 
-
-export default app;
+export default app
