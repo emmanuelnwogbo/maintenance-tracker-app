@@ -1,4 +1,5 @@
 import validator from 'validator'
+import bcrypt from 'bcrypt'
 
 function Validate(req, res, next) {
   if (!validator.isEmail(req.body.email)) {
@@ -9,6 +10,7 @@ function Validate(req, res, next) {
 
   next()
 }
+
 
 export default {
   Validate
