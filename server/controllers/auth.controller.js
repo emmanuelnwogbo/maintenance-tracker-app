@@ -28,7 +28,7 @@ export default class Auth {
         })
       }
 
-      if (req.path === '/user/signup') {
+      if (req.body.role === 'user') {
         bcrypt.hash(password, 10).then(hash => {
           client.query('INSERT INTO users(firstname, lastname, email, role, password) values($1, $2, $3, $4, $5)', [firstname, lastname, email, 'user', hash])
           const query = client.query(`SELECT * FROM users WHERE email='${email}'`)
@@ -61,7 +61,7 @@ export default class Auth {
         })
       }
 
-      if (req.path === '/admin/signup') {
+      if (req.body.role === 'admin') {
         console.log('metrix');
       }
     });
