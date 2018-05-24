@@ -1,6 +1,6 @@
 import express from 'express';
 import Controllers from '../controllers'
-import Utils from '../Utils'
+import Utils from '../utils'
 
 const {
   Validate
