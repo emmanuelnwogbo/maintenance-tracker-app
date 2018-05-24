@@ -1,50 +1,42 @@
 import express from 'express';
 
-import Controllers from '../controllers'
-import Utility from '../utils'
-
-const {
-  RequestController
-} = Controllers
-const {
-  addRequest,
-  getRequests,
-  getRequest,
-  updateRequest,
-  deleteRequest
-} = RequestController
-
-const {
-  Validate,
-  Trim,
-  Authenticate
-} = Utility
-
-const {
-  findUserId
-} = Authenticate
-
-const {
-  BasicInputCheck
-} = Validate
-
 const router = express.Router()
 const requestRoute = router
 
-router.get('/:adminid', findUserId, getRequests)
+router.get('/users/requests', (req, res) => {
+  // a user can get a request
+})
 
-router.get('/user/:userid', findUserId, getRequests)
+router.post('/users/requests', (req, res) => {
+  // a user can post a request
+})
 
-router.post('/', Trim, BasicInputCheck, addRequest)
+router.get('/users/requests/:requestId', (req, res) => {
+  // a user or admin can get a particular request
+})
 
-router.get('/:adminid/:requestid', findUserId, getRequest)
+router.put('/users/requests/:requestId', (req, res) => {
+  // a user can update a request
+})
 
-router.get('/user/:userid/:requestid', findUserId, getRequest)
 
-router.patch('/:adminid/:requestid', Trim, findUserId, updateRequest)
+// all routes below are only accessible to admins
 
-router.patch('/user/:userid/:requestid', Trim, BasicInputCheck, findUserId, updateRequest)
+router.get('/', (req, res) => {
+  // an admin can get all requests
+  // make sure this is available to only admins
+})
 
-router.delete('/user/:userid/:requestid', findUserId, deleteRequest)
+router.put('/:requestId/approve', (req, res) => {
+  // an admin can approve a request
+})
+
+router.put('/:requestId/disapprove', (req, res) => {
+  // an admin can disaprove a request
+})
+
+router.put('/:requestId/resolve', (req, res) => {
+  // an admin can resolve a request
+})
 
 export default requestRoute
