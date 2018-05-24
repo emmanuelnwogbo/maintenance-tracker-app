@@ -4,28 +4,17 @@ const router = express.Router()
 const userRoute = router
 
 
-router.post('/user/signup', (req, res) => {
+router.post('/signup', (req, res) => {
   res.send('hello user signup');
 })
 
-router.post('/user/signin', (req, res) => {
+router.post('/login', (req, res) => {
   res.send('hello user signin');
 })
 
-router.post('/user/logout', (req, res) => {
+router.post('/logout', (req, res) => {
   res.send('hello user logout');
 })
 
-router.post('/admin/signup', (req, res) => {
-  res.send('hello admin signup');
-})
-
-router.post('/admin/signin', (req, res) => {
-  res.send('hello user signin');
-})
-
-router.post('/admin/logout', (req, res) => {
-  res.send('hello user logout');
-})
 
 export default userRoute
