@@ -23,7 +23,33 @@ export default class Auth {
       if (req.path === '/login') {
         const query = client.query(`SELECT * FROM users WHERE email='${email}'`);
         query.on('row', row => {
-          console.log(row)
+          bcrypt.compare(password, row.password, (err, result) => {
+            if (!result) {
+              return res.status(401).send({
+                message: `wrong password`
+              })
+            }
+            const {
+              id,
+              firstname,
+              lastname,
+              email,
+              role
+            } = row
+            const user = {
+              id,
+              firstname,
+              lastname,
+              email,
+              role
+            }
+            const token = jwt.sign(id, process.env.JWT_SECRET)
+            client.query('INSERT INTO tokens(userid, token) values($1, $2)', [id, token])
+            res.header('auth', token).status(200).send({
+              message: `you succesfully signed in`,
+              user
+            })
+          })
         })
       }
     })
