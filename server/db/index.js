@@ -1,16 +1,10 @@
-import knex from 'knex'
+import pg from 'pg'
 import dotenv from 'dotenv'
 
 dotenv.config()
 
-const db = knex({
-  client: 'pg',
-  connection: {
-    host: '127.0.0.1',
-    user: 'postgres',
-    password: process.env.DB_PASSWORD,
-    database: 'mtrackerdb'
-  }
-})
+const connectionString = process.env.DATABASE_URL
+const client = new pg.Client(connectionString)
+client.connect()
 
-export default db
+export default client

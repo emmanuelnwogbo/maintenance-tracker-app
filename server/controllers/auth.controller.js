@@ -1,6 +1,9 @@
+import pg from 'pg'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
-import db from '../db'
+import client from '../db'
+
+const connectionString = process.env.DATABASE_URL
 
 export default class Auth {
   static signup(req, res) {
@@ -10,28 +13,57 @@ export default class Auth {
       email,
       password
     } = req.body
-    bcrypt.hash(password, 10).then(hash => {
-      db('users')
-        .returning('*')
-        .insert({
-          firstname,
-          lastname,
-          email,
-          password: hash
+    const data = {
+      firstname,
+      lastname,
+      email,
+      password
+    }
+
+    pg.connect(connectionString, (err, client, done) => {
+      if (err) {
+        done()
+        return res.status(400).send({
+          message: `pls check your credentials`
         })
-        .then(response => {
-          const token = jwt.sign(response[0].id, process.env.JWT_SECRET)
-          db('login').insert({
-            userid: response[0].id,
-            usertoken: token
+      }
+
+      if (req.path === '/user/signup') {
+        bcrypt.hash(password, 10).then(hash => {
+          client.query('INSERT INTO users(firstname, lastname, email, role, password) values($1, $2, $3, $4, $5)', [firstname, lastname, email, 'user', hash])
+          const query = client.query(`SELECT * FROM users WHERE email='${email}'`)
+          query.on('row', row => {
+            const {
+              id,
+              firstname,
+              lastname,
+              email,
+              role
+            } = row
+            const token = jwt.sign(id, process.env.JWT_SECRET)
+            const user = {
+              id,
+              firstname,
+              lastname,
+              email,
+              role
+            }
+            client.query('INSERT INTO tokens(userid, token) values($1, $2)', [id, token])
+            res.header('auth', token).status(201).send({
+              message: `you signed up successfully`,
+              user
+            })
           })
-          res.status(201).header('x-auth', token).send({
-            message: `sign up success`
+
+          query.on('end', () => {
+            done();
           })
         })
-        .catch(err => res.status(400).send({
-          message: `please make sure your credentials are valid`
-        }))
-    })
+      }
+
+      if (req.path === '/admin/signup') {
+        console.log('metrix');
+      }
+    });
   }
 }
