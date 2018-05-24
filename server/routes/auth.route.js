@@ -17,7 +17,7 @@ router.post('/user/logout', (req, res) => {
 })
 
 router.post('/admin/signup', (req, res) => {
-  res.send('hello user signup');
+  res.send('hello admin signup');
 })
 
 router.post('/admin/signin', (req, res) => {
