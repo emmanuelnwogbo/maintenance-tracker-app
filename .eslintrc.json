@@ -34,7 +34,11 @@
         "no-unused-vars": "off",
         "prefer-arrow-callback": "off",
         "camelcase": "off",
+<<<<<<< HEAD
         "no-undef": "warn",
         "array-callback-return": "off"
+=======
+        "no-undef": "warn"
+>>>>>>> ft-user-signup-157832340
     }
 }

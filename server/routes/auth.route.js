@@ -1,27 +1,28 @@
 import express from 'express';
+import Controllers from '../controllers'
+import Utils from '../utils'
+
+const {
+  Validate
+} = Utils
+const {
+  Auth
+} = Controllers
+const {
+  signup
+} = Auth
 
 const router = express.Router()
 const userRoute = router
 
 
-router.post('/signup', (req, res) => {
-  res.status(201).send({
-    message: `you're signedup`,
-    body: req.body
-  });
+router.post('/signup', Validate, signup)
+
+router.post('/user/signin', (req, res) => {
+  res.send('hello user signin');
 })
 
-router.post('/login', (req, res) => {
-  res.status(200).send({
-    message: `you're logged in`
-  });
+router.post('/user/logout', (req, res) => {
+  res.send('hello user logout');
 })
-
-router.post('/logout', (req, res) => {
-  res.status(200).send({
-    message: `you're logged out`
-  });
-})
-
-
 export default userRoute

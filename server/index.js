@@ -5,7 +5,8 @@ import dotenv from 'dotenv'
 import routes from './routes'
 
 dotenv.config()
-const app = express();
+
+const app = express()
 
 const {
   indexRoute,
@@ -18,6 +19,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
   extended: false
 }))
+
 
 app.use('/api/v1', indexRoute)
 app.use('/api/v1/auth', authRoute)
@@ -34,5 +36,4 @@ app.listen(PORT, error => {
   return `server started on port ${PORT}`
 })
 
-
-export default app;
+export default app
