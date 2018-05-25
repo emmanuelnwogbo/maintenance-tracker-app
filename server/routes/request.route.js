@@ -1,4 +1,5 @@
 import express from 'express';
+import nonPersistDB from '../nonPersistDB'
 
 const router = express.Router()
 const requestRoute = router
@@ -6,20 +7,70 @@ const requestRoute = router
 // all routes below are only accessible to admins
 
 router.get('/', (req, res) => {
-  // an admin can get all requests
-  // make sure this is available to only admins
+  res.status(200).send(nonPersistDB[0])
 })
 
-router.put('/:requestId/approve', (req, res) => {
-  // an admin can approve a request
+router.put('/:requestid/approve', (req, res) => {
+  let counter = 0;
+  let found = 0
+  nonPersistDB[0].map(item => {
+    if (item.id === req.params.requestid) {
+      found += 1
+      res.status(200).send({
+        message: `request successfully approved`,
+        body: req.body
+      });
+    }
+    counter += 1
+  })
+
+  if (found < 1 && counter === nonPersistDB[0].length) {
+    res.status(404).send({
+      message: `no such request exists `
+    })
+  }
 })
 
-router.put('/:requestId/disapprove', (req, res) => {
-  // an admin can disaprove a request
+router.put('/:requestid/disapprove', (req, res) => {
+  let counter = 0;
+  let found = 0
+  nonPersistDB[0].map(item => {
+    if (item.id === req.params.requestid) {
+      found += 1
+      res.status(200).send({
+        message: `request successfully disapproved`,
+        body: req.body
+      });
+    }
+    counter += 1
+  })
+
+  if (found < 1 && counter === nonPersistDB[0].length) {
+    res.status(404).send({
+      message: `no such request exists `
+    })
+  }
 })
 
-router.put('/:requestId/resolve', (req, res) => {
-  // an admin can resolve a request
+router.put('/:requestid/resolve', (req, res) => {
+  let counter = 0;
+  let found = 0
+  nonPersistDB[0].map(item => {
+    if (item.id === req.params.requestid) {
+      found += 1
+      res.status(200).send({
+        message: `request successfully resolved`,
+        body: req.body
+      });
+    }
+    counter += 1
+  })
+
+  if (found < 1 && counter === nonPersistDB[0].length) {
+    res.status(404).send({
+      message: `no such request exists `
+    })
+  }
 })
 
 export default requestRoute

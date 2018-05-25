@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({
 
 app.use('/api/v1', indexRoute)
 app.use('/api/v1/auth', authRoute)
-app.use('/api/users/requests', userRequestRoute)
+app.use('/api/v1/users/requests', userRequestRoute)
 app.use('/api/v1/requests', requestRoute)
 
 const PORT = process.env.PORT || 8080

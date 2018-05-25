@@ -5,15 +5,22 @@ const userRoute = router
 
 
 router.post('/signup', (req, res) => {
-  res.send('hello user signup');
+  res.status(201).send({
+    message: `you're signedup`,
+    body: req.body
+  });
 })
 
 router.post('/login', (req, res) => {
-  res.send('hello user signin');
+  res.status(200).send({
+    message: `you're logged in`
+  });
 })
 
 router.post('/logout', (req, res) => {
-  res.send('hello user logout');
+  res.status(200).send({
+    message: `you're logged out`
+  });
 })
 
 
