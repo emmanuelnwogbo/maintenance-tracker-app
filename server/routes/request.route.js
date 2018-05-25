@@ -3,23 +3,6 @@ import express from 'express';
 const router = express.Router()
 const requestRoute = router
 
-router.get('/users/requests', (req, res) => {
-  // a user can get a request
-})
-
-router.post('/users/requests', (req, res) => {
-  // a user can post a request
-})
-
-router.get('/users/requests/:requestId', (req, res) => {
-  // a user or admin can get a particular request
-})
-
-router.put('/users/requests/:requestId', (req, res) => {
-  // a user can update a request
-})
-
-
 // all routes below are only accessible to admins
 
 router.get('/', (req, res) => {
