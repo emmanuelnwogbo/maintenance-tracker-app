@@ -1,7 +1,6 @@
 import express from 'express';
 
-import authRoute from './auth.route';
-import requestRoute from './request.route'
+import authRoute from './auth.route'
 
 const router = express.Router()
 const indexRoute = router
@@ -13,6 +12,5 @@ router.get('/', (req, res) => {
 
 export default {
   indexRoute,
-  authRoute,
-  requestRoute
+  authRoute
 }
