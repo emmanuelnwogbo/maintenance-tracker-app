@@ -1,4 +1,4 @@
-import Auth from './auth.controller'
+import Auth from './auth'
 
 export default {
   Auth

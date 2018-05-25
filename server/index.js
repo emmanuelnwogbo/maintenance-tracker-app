@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 
+app.use('/', indexRoute);
 app.use('/api/v1', indexRoute)
 app.use('/api/v1/auth', authRoute)
 app.use('/api/v1/users/requests', userRequestRoute)

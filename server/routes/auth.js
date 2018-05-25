@@ -9,7 +9,8 @@ const {
   Auth
 } = Controllers
 const {
-  signup
+  signup,
+  signin
 } = Auth
 
 const router = express.Router()
@@ -18,11 +19,9 @@ const userRoute = router
 
 router.post('/signup', Validate, signup)
 
-router.post('/user/signin', (req, res) => {
-  res.send('hello user signin');
-})
+router.post('/login', Validate, signin)
 
-router.post('/user/logout', (req, res) => {
+router.post('/logout', (req, res) => {
   res.send('hello user logout');
 })
 export default userRoute

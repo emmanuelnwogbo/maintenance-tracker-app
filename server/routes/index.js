@@ -1,15 +1,17 @@
 import express from 'express';
 
-import authRoute from './auth.route';
-import userRequestRoute from './userRequest.route'
-import requestRoute from './request.route'
+import authRoute from './auth';
+import userRequestRoute from './userRequest'
+import requestRoute from './request'
 
 const router = express.Router()
 const indexRoute = router
 
 
 router.get('/', (req, res) => {
-  res.send('hello index');
+  res.send({
+    message: `welcome to the maintainance tracker api`
+  })
 })
 
 export default {
