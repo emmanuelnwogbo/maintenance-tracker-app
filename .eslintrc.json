@@ -34,6 +34,7 @@
         "no-unused-vars": "off",
         "prefer-arrow-callback": "off",
         "camelcase": "off",
-        "no-undef": "warn"
+        "no-undef": "warn",
+        "array-callback-return": "off"
     }
 }
