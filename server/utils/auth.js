@@ -8,6 +8,11 @@ export default class Auth {
     return token
   }
 
+  static JWTdecode(token) {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    return 'decoded', decoded
+  }
+
   static Validate(req, res, next) {
     if (!validator.isEmail(req.body.email)) {
       return res.status(403).send({
