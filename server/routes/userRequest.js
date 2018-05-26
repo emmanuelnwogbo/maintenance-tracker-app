@@ -1,5 +1,14 @@
 import express from 'express';
-import nonPersistDB from '../nonPersistDB'
+import Controllers from '../controllers'
+
+const {
+  Request
+} = Controllers
+const {
+  addRequest,
+  modifyRequest,
+  getRequests
+} = Request
 
 const router = express.Router()
 const userRequestRoute = router
@@ -26,12 +35,7 @@ router.get('/:requestid', (req, res) => {
   }
 })
 
-router.post('/', (req, res) => {
-  res.status(201).send({
-    message: `request created`,
-    body: req.body
-  });
-})
+router.post('/', addRequest)
 
 router.put('/:requestid', (req, res) => {
   let counter = 0;
