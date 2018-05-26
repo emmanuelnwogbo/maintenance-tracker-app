@@ -1,11 +1,20 @@
 import pg from 'pg'
 import bcrypt from 'bcrypt'
-import jwt from 'jsonwebtoken'
 import client from '../db'
+
+import Utils from '../utils'
+
+const {
+  Auth
+} = Utils
+
+const {
+  JWTauth
+} = Auth
 
 const connectionString = process.env.DATABASE_URL
 
-export default class Auth {
+export default class User {
   static signup(req, res) {
     const {
       firstname,
@@ -40,7 +49,7 @@ export default class Auth {
               email,
               role
             } = row
-            const token = jwt.sign(id, process.env.JWT_SECRET)
+
             const user = {
               id,
               firstname,
@@ -48,6 +57,7 @@ export default class Auth {
               email,
               role
             }
+            const token = JWTauth(id)
             client.query('INSERT INTO tokens(userid, token) values($1, $2)', [id, token])
             res.header('auth', token).status(201).send({
               message: `you signed up successfully`,
@@ -105,7 +115,7 @@ export default class Auth {
               email,
               role
             }
-            const token = jwt.sign(id, process.env.JWT_SECRET)
+            const token = JWTauth(id)
             client.query('INSERT INTO tokens(userid, token) values($1, $2)', [id, token])
             res.header('auth', token).status(200).send({
               message: `you succesfully signed in`,

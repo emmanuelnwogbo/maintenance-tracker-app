@@ -6,8 +6,8 @@
   "scripts": {
     "test": "mocha --compilers js:babel-core/register tests/*.test.js",
     "test-watch": "nodemon --exec npm run test",
-    "dev": "nodemon server/index.js --exec babel-node --presets es2015,stage-2",
-    "build": "babel server -d build --presets es2015,stage-2",
+    "dev": "nodemon server/index.js --exec babel-node",
+    "build": "babel server -d build",
     "server": "node build/index.js",
     "start": "npm run build && npm run server"
   },

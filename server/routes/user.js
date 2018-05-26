@@ -3,15 +3,20 @@ import Controllers from '../controllers'
 import Utils from '../utils'
 
 const {
-  Validate
-} = Utils
-const {
   Auth
+} = Utils
+
+const {
+  Validate
+} = Auth
+
+const {
+  User
 } = Controllers
 const {
   signup,
   signin
-} = Auth
+} = User
 
 const router = express.Router()
 const userRoute = router
